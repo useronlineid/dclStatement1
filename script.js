@@ -236,7 +236,7 @@ function generateStatement() {
                     ${rows.map((row, index) => `
                         <p style="position: absolute; top: ${464 + index * 25}px; left: 35px;font-size: 19px;letter-spacing: -0.25px;">${row.date}</p>
                         <p style="position: absolute; top: ${464 + index * 25}px; left: 140px;font-size: 19px;letter-spacing: -0.25px;">${row.time}</p>
-                        <p style="position: absolute; top: ${464 + index * 25}px; left: 224px; font-size: 19px; letter-spacing: -0.7px;">${row.text}</p>
+                        <p style="position: absolute; top: ${464 + index * 25}px; left: 224px; font-size: 19px; letter-spacing: -0.6px;">${row.text}</p>
                         <p style="position: absolute; top: ${464 + index * 25}px; left: 427px;font-size: 19px;letter-spacing: -0.7px;">${row.randomMessage}</p>
                         <p style="position: absolute; top: ${464 + index * 25}px; left: 640px;font-size: 19px;letter-spacing: -0.7px;text-align: center; transform: translateX(-100%);">${row.randomAmount}</p>
                         <p style="position: absolute; top: ${464 + index * 25}px; left: 810px;font-size: 19px;letter-spacing: -0.25px;text-align: center; transform: translateX(-100%);">${row.zeroAmount}</p>
