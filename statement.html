@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Statement</title>
+    <link rel="stylesheet" href="styles-output.css">
+</head>
+<body>
+    <div class="container">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const statementData = JSON.parse(localStorage.getItem('statementData'));
+            const container = document.querySelector('.container');
+
+            const list = document.createElement('ul');
+            list.classList.add('statement-list');
+
+            statementData.forEach(row => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <p><strong>วันที่ทำรายการ:</strong> ${row.date}</p>
+                    <p><strong>เวลาทำรายการ:</strong> ${row.time}</p>
+                    <p><strong>ข้อความ:</strong> ${row.text}</p>
+                    <p><strong>ข้อความสุ่ม:</strong> ${row.randomMessage}</p>
+                    <p><strong>จำนวนเงิน:</strong> ${row.randomAmount}</p>
+                    <p><strong>จำนวนเงิน (0.00):</strong> ${row.zeroAmount}</p>
+                    <p><strong>ข้อความเพิ่มเติม:</strong> ${row.additionalMessage}</p>
+                    <p><strong>วันที่รายการมีผล:</strong> ${row.transactionEffectDate}</p>
+                `;
+                list.appendChild(listItem);
+            });
+
+            container.appendChild(list);
+        });
+    </script>
+</body>
+</html>
