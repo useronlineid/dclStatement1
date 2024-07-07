@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กรอกข้อมูล</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>กรอกข้อมูล</h1>
+        <form id="inputForm">
+            <label for="date">วันที่:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">เวลา (hh:mm:ss):</label>
+            <input type="time" id="time" step="1" required>
+
+            <label for="accountNumber">เลขบัญชี:</label>
+            <input type="text" id="accountNumber" required>
+
+            <label for="accountName">ชื่อบัญชี:</label>
+            <input type="text" id="accountName" required>
+
+            <button type="button" onclick="generateStatement()">บันทึก</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
